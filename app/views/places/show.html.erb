@@ -41,7 +41,6 @@
     <blockquote>
       <%= image_tag photo.picture %>
       <b><%= photo.caption %></b> -
-      <small><%= comment.user.email %></small>
     </blockquote>
   </div>
 <% end %>
@@ -82,7 +81,7 @@
 </div>
 <br />
 <!--<div class="border"></div>-->
-</br >
+
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
   Add a comment
@@ -98,7 +97,7 @@
         </button>
         <h4 class="modal-title" id="myModalLabel">Add a comment</h4>
       </div>
-              <%= simple_form_for @comment, url:place_comments_path(@place) do |f| %>
+      <%= simple_form_for @comment, url:place_comments_path(@place) do |f| %>
       <div class="modal-body">
   <%= f.input :message %>
   <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
