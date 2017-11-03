@@ -38,8 +38,8 @@
 <div class="row">
 <% @place.photos.each do |photo| %>
   <div class="col-12 col-sm-6">
-    <blockquote>
-      <%= image_tag photo.picture %>
+      <%= image_tag photo.picture, :class =>"img" %>
+      <blockquote>
       <b><%= photo.caption %></b> -
     </blockquote>
   </div>
@@ -53,11 +53,11 @@
 
 </div>
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">
+<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#PhotoModal">
   Add a photo
 </button>
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="PhotoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
