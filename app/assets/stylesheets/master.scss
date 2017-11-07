@@ -85,8 +85,7 @@ img {
 }
 
 .img-index {
-
-}
+text-align: right;}
 
 .carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
 display: block;
@@ -113,4 +112,8 @@ max-width: 75%;
 .carousel-item-next,
 .carousel-item-prev{
  display:block !important;
+}
+
+@-ms-viewport{
+  width: device-width;
 }

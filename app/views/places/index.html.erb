@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <div class="flickr_pagination">
 <%= will_paginate @places, previous_label: h("<"), next_label: h(">") %>
 </div>
@@ -44,7 +45,7 @@
     <% if place.user.present? %>
     <small><%= place.user.email %></small>
     <% end %>
-    <div class="col-10 offset-1 ">
+    <div class="col-10">
     <% if place.photos.present? %>
       <%= image_tag place.photos.last.picture, :class => "img-index" %>
     <% end %>
